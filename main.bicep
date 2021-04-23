@@ -54,6 +54,7 @@ module bastion 'bastionhost.bicep' = {
     bastionHostName: 'bastionhost'
     virtualNetworkName: vnet.outputs.vnetname
     bastionSubnetIpPrefix: '10.1.0.32/27'
+    ipaddress:ipaddress
   }
   dependsOn:[
     [
