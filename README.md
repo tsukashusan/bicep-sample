@@ -46,7 +46,6 @@ https://github.com/Azure/bicep/blob/main/docs/installing.md#windows-installer
 1. Create SSH Private Key
 ```
 ssh-keygen `
-    -m PEM `
     -t rsa `
     -b 4096 `
     -o `
@@ -195,3 +194,6 @@ Set-Content -Path .\secretfile.txt -Value ${privateKey}
 az keyvault secret set --vault-name ${keyVault}.name --name ${secretName}  --file ".\secretfile.txt"
 Remove-Item .\secretfile.txt
 ```
+
+# CONFIDENTIAL 
+本リポジトリにあるすべての成果物は情報提供のみを目的としており、本リポジトリにあるすべての成果物に記載されている情報は、状況等の変化により、内容は変更される場合があります。本リポジトリにあるすべての成果物の情報に対して明示的、黙示的または法的な、いかなる保証も行いません。
