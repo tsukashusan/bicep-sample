@@ -157,12 +157,15 @@ $keyVault = Get-AzKeyVault -VaultName ${keyVaultName}
 ```
 $secretName = "xxxx"
 ```
-3. set SSH private key
+3. set SSH private key</br>
+ex.)</br>
+-----BEGIN OPENSSH PRIVATE KEY-----</br>
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABCfshZRFC</br>
+w2lrwiS516OZTQAAAAEAAAAAEAAAIXAAAAB3NzaC...</br>
+-----END OPENSSH PRIVATE KEY-----
 ```
 $privateKey = @"
------BEGIN OPENSSH PRIVATE KEY-----
-xxxxxx
------END OPENSSH PRIVATE KEY-----
+xxxx
 "@ 
 ```
 4. Excecute command as below.
@@ -180,12 +183,15 @@ $keyVault = az keyvault list --query '[?name==`xxxxx`]' | ConvertFrom-Json
 ```
 $secretName = "xxxx"
 ```
-3. set SSH private key
+3. set SSH private key</br>
+ex.)</br>
+-----BEGIN OPENSSH PRIVATE KEY-----</br>
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABCfshZRFC</br>
+w2lrwiS516OZTQAAAAEAAAAAEAAAIXAAAAB3NzaC...</br>
+-----END OPENSSH PRIVATE KEY-----
 ```
 $privateKey = @"
------BEGIN OPENSSH PRIVATE KEY-----
-xxxxxx
------END OPENSSH PRIVATE KEY-----
+xxxx
 "@ 
 ```
 4. Excecute command as below.
