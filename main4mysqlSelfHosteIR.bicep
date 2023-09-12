@@ -53,9 +53,7 @@ module mysql 'virtual_machine4Linux.bicep' = {
     storageAccountType: 'StandardSSD_LRS'
   }
   dependsOn:[
-    [
-      vnet
-    ]
+    vnet
   ]
 }
 
@@ -70,8 +68,6 @@ module bastion 'bastionhost.bicep' = {
     ipaddress: ipaddress
   }
   dependsOn:[
-    [
-      vnet
-    ]
+    vnet
   ]
 }

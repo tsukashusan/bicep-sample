@@ -2,3 +2,7 @@
 *.bak
 *.pub
 *_key
+secretfile.txt
+deply.ps1
+create-keyvault.ps1
+create-keyvault-azcli.ps1

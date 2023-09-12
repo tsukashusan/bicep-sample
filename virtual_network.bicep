@@ -14,17 +14,18 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2020-11-01' = {
       ]
     }
   }
-}
-
-resource subNet 'Microsoft.Network/virtualNetworks/subnets@2020-11-01' = {
-  name: '${virtualNetwork.name}/default'
-  properties: {
-    addressPrefix: defaultSubnetIpPrefix
-    networkSecurityGroup:{
-      id: IngressTrafficeFromBastoinNSG.id
+  resource subNet 'subnets@2020-11-01' = {
+    name: 'default'
+    properties: {
+      addressPrefix: defaultSubnetIpPrefix
+      networkSecurityGroup:{
+        id: IngressTrafficeFromBastoinNSG.id
+      }
     }
   }
 }
+
+
 
 resource IngressTrafficeFromBastoinNSG 'Microsoft.Network/networkSecurityGroups@2020-11-01' = {
   name: '${virtualNetworkName}-nsg'
@@ -52,5 +53,4 @@ resource IngressTrafficeFromBastoinNSG 'Microsoft.Network/networkSecurityGroups@
 }
 
 output vnetname string = virtualNetwork.name
-output subnetId string = subNet.id
-
+output subnetId string = virtualNetwork.properties.subnets[0].id

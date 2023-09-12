@@ -48,9 +48,7 @@ module vm './virtual_machine.bicep' = {
     storageAccountType: 'StandardSSD_LRS'
   }
   dependsOn:[
-    [
-      vnet
-    ]
+    vnet
   ]
 }
 
@@ -64,9 +62,7 @@ module bastion 'bastionhost.bicep' = {
     ipaddress: ipaddress
   }
   dependsOn:[
-    [
-      vnet
-    ]
+    vnet
   ]
 }
 
